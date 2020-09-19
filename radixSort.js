@@ -116,13 +116,76 @@ function radixSort(nums){
     let maxDigitCount = mostDigits(nums)
     for(let k = 0; k < maxDigitCount; k++){
         let digitBuckets = Array.from({length: 10}, () => [] )
+        console.log("digitBucket1", digitBuckets)
+
         for(let i = 0; i < nums.length; i++){
             let digit = getDigit(nums[i], k)
+            console.log("digit", digit)
             digitBuckets[digit].push(nums[i])
         }
+
         nums = [].concat(...digitBuckets)
     }
+
     return nums
 }
 
  console.log(radixSort([23,334,21, 3421, 1453, 9898, 7323]))
+
+
+
+//  getDigit 0 3
+// getDigit 1 2
+// getDigit 2 3
+// getDigit 3 7
+// digitCount 4
+// mostDigit 4
+// digitBucket1 [
+//   [], [], [], [], [],
+//   [], [], [], [], []
+// ]
+// digit 3
+// digit 4
+// digit 1
+// digit 1
+// digit 3
+// digit 8
+// digit 3
+// digitBucket1 [
+//   [], [], [], [], [],
+//   [], [], [], [], []
+// ]
+// digit 2
+// digit 2
+// digit 2
+// digit 5
+// digit 2
+// digit 3
+// digit 9
+// digitBucket1 [
+//   [], [], [], [], [],
+//   [], [], [], [], []
+// ]
+// digit 0
+// digit 4
+// digit 0
+// digit 3
+// digit 3
+// digit 4
+// digit 8
+// digitBucket1 [
+//   [], [], [], [], [],
+//   [], [], [], [], []
+// ]
+// digit 0
+// digit 0
+// digit 7
+// digit 0
+// digit 3
+// digit 1
+// digit 9
+// [
+//     21,   23,  334,
+//   1453, 3421, 7323,
+//   9898
+// ]
