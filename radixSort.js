@@ -34,23 +34,6 @@ console.log("getDigit 3", getDigit(7323, 3))//7
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ///////////////////////////////////////////////////
 //***************RADIX SORT HELPER 2 ************/
 ///////////////////////////////////////////////////
@@ -62,19 +45,6 @@ function digitCount(num){
 }
 
 console.log("digitCount", digitCount(7323))//4
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -91,19 +61,6 @@ function mostDigits(nums){
     return maxDigits
 }
 console.log("mostDigit", mostDigits([23,334,21, 3421, 1453, 9898, 7323])) //4
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
